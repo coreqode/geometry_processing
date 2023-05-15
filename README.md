@@ -7,6 +7,10 @@ Non-Efficient implementation of Geometry Processing Algorithms from scratch.
 
 ![alt PSR](/assets/psr.png)
 
+### [Smoothing](https://github.com/alecjacobson/geometry-processing-smoothing)
+![alt Smoothing](/assets/smoothing.gif)
+
+
 ---
 ## How to use?
 ```

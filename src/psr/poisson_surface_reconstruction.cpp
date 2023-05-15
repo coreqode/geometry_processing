@@ -1,10 +1,10 @@
-#include "poisson_surface_reconstruction.h"
+#include "psr/poisson_surface_reconstruction.h"
 #include <igl/copyleft/marching_cubes.h>
 #include <algorithm>
 #include <iostream>
-#include "fd_interpolate.h"
-#include "fd_partial_derivative.h"
-#include "fd_grad.h"
+#include "geo_utils/fd_interpolate.h"
+#include "geo_utils/fd_partial_derivative.h"
+#include "geo_utils/fd_grad.h"
 #include "igl/cat.h" 
 
 void poisson_surface_reconstruction(

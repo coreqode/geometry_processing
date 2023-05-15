@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
+set(CMAKE_CXX_STANDARD 17)
 
 project("Geometry Processing")
 
@@ -60,14 +61,20 @@ add_subdirectory("deps/Eigen")
 #add_subdirectory("deps/libIGL")
 
 # Create an executable
-file(GLOB_RECURSE SOURCE_FILES
-	${CMAKE_SOURCE_DIR}/src/*/*.cpp)
-
-add_executable(psr ${SOURCE_FILES})
 
 # Include settings
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/deps/libigl/include")
-include_directories("${CMAKE_CURRENT_SOURCE_DIR}/deps/include")
+include_directories("${CMAKE_CURRENT_SOURCE_DIR}/include")
 
-# Link settings
+file(GLOB_RECURSE SOURCE_FILES
+	${CMAKE_SOURCE_DIR}/src/*/*.cpp )
+
+
+add_executable(psr ${SOURCE_FILES} "exec/psr.cpp")
 target_link_libraries(psr polyscope Eigen3::Eigen)
+
+add_executable(smooth ${SOURCE_FILES} "exec/smooth.cpp")
+target_link_libraries(smooth polyscope Eigen3::Eigen)
+
+add_executable(viewmesh ${SOURCE_FILES} "exec/viewmesh.cpp")
+target_link_libraries(viewmesh polyscope Eigen3::Eigen)
