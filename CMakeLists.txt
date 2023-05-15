@@ -78,3 +78,6 @@ target_link_libraries(smooth polyscope Eigen3::Eigen)
 
 add_executable(viewmesh ${SOURCE_FILES} "exec/viewmesh.cpp")
 target_link_libraries(viewmesh polyscope Eigen3::Eigen)
+
+add_executable(tutte ${SOURCE_FILES} "exec/tutte.cpp")
+target_link_libraries(tutte polyscope Eigen3::Eigen)

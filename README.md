@@ -10,6 +10,9 @@ Non-Efficient implementation of Geometry Processing Algorithms from scratch.
 ### [Smoothing](https://github.com/alecjacobson/geometry-processing-smoothing)
 ![alt Smoothing](/assets/smoothing.gif)
 
+### [Parameterization](https://people.math.harvard.edu/~knill/teaching/summer2011/handouts/22-uvmap.pdf)
+#### Tutte Style Parameterization
+![alt Parameterization](/assets/param.png)
 
 ---
 ## How to use?
