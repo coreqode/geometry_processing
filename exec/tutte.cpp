@@ -10,6 +10,7 @@
 #include "igl/boundary_loop.h"
 #include "igl/min_quad_with_fixed.h"
 #include "igl/writeOBJ.h"
+#include "igl/adjacency_matrix.h"
 
 int main(int argc, char **argv) {
     std::string filename;
@@ -22,7 +23,6 @@ int main(int argc, char **argv) {
     Eigen::SparseMatrix<double> L(V.rows(), V.rows());
     igl::cotmatrix(V, F, L);
     L = L * -1; //By default cotmatrix gives the negative-definite matrix
-
 
     // Indicating u,v with U1,V1
     Eigen::MatrixXd U(V.rows(), 2);
